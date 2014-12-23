@@ -25,18 +25,21 @@
             <form action="/" method="post" class="b-call__callback-form">
                 <div class="b-call__step">
                     <label for="name" class="b-call__label">Ваше имя</label>
-                    <input type="text" name="name" id="name" class="b-call__input" placeholder="Константин">  
-                    
+                    <input type="text" name="name" id="name" class="b-call__input" placeholder="Константин">
+                    <div class="myToolTip">Введите ваше имя</div>
                 </div>
 
                 <div class="b-call__step">
                     <label for="phone" class="b-call__label">Телефон</label>
                     <input type="text" name="phone" id="phone" class="b-call__input" placeholder="+7 (912) 000-00-00">
+                    <div class="myToolTip">Корректно укажите номер телефона</div>
                 </div>
                 
                 <div class="b-call__step">
-                    <label for="phone" class="b-call__label">Дата звонка</label>
+                    <label for="phone" class="b-call__label">Время звонка</label>
+
                     <select class="b-call__select">
+                        <option>0</option>
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
@@ -61,40 +64,35 @@
                         <option>21</option>
                         <option>22</option>
                         <option>23</option>
-                        <option>24</option>
-                        <option>25</option>
-                        <option>26</option>
-                        <option>27</option>
-                        <option>28</option>
-                        <option>29</option>
-                        <option>30</option>
-                        <option>31</option>
                     </select>                    
                     <select class="b-call__select">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
-                    </select> 
+                        <option value="1">00</option>
+                        <option value="1">05</option>
+                        <option value="1">10</option>
+                        <option value="1">15</option>
+                        <option value="2">20</option>
+                        <option value="2">25</option>
+                        <option value="3">30</option>
+                        <option value="3">35</option>
+                        <option value="4">40</option>
+                        <option value="4">45</option>
+                        <option value="5">50</option>
+                        <option value="5">55</option>
+                    </select>
+
+                    <div class="myToolTip">Укажите удобное время звонка</div>
                 </div>
                               
                 <div class="b-call__step b-call__step-h67">
                     <textarea class="b-call__tarea" placeholder="Комментарий"></textarea>
+                    <div class="myToolTip">Комментарий должен быть не длиннее 100 символов</div>
                 </div>  
                               
                 <div class="b-call__step">
                     <input type="submit" value="Отправить" class="b-call__send">
                     <input type="reset" value="Очистить" class="b-call__reset">
                 </div>           
-                               
+
             </form>
             
             
@@ -259,8 +257,9 @@
             </ul>
             
             <div class="b-slider__arrows">
-                <a href='#'  class='b-slider__arrows-left prev_slide' id="prev">Пред.</a>
-                <a href='#'  class='b-slider__arrows-right next_slide' id="next">След.</a>                  
+                <span class='b-slider__arrows-left prev_slide' id="prev">Пред.</span>
+                <span  class='b-slider__arrows-right next_slide' id="next">След.</span>
+                <input id="b-slider__arrows-status" type="hidden" value="1"/>
             </div>
          
         </div>
@@ -591,6 +590,7 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.js"></script>
 <script src="js/jquery.myslider.js"></script>
 <script src="js/jquery.scrollTop.js"></script>
+<script src="js/jquery.tooltip.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

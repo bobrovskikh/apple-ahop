@@ -1,0 +1,47 @@
+
+//стиль сообщения
+$message-bg: #ef5b5b;
+$message-padding: 8px 14px;
+$message-shadow: 0px 0px 10px rgba(0,0,1,.5);
+$input-shadow: 0px 0px 5px rgba(239,91,91,0.5);
+$message-textColor: #fff;
+$message-lineHeight: 1;
+
+//стиль стрелки
+$arrow-width: 5px;
+$arrow-height: 8px;
+$message-indent: 10px;
+
+.b-call__input-error {
+    border: 1px solid $message-bg;
+    box-shadow: $input-shadow;
+}
+
+.myToolTip {
+    background-color: $message-bg;
+    box-shadow: $message-shadow;
+    color: $message-textColor;
+    display: none;
+    line-height: $message-lineHeight;
+    padding: $message-padding;
+    position: absolute;
+    white-space: nowrap;
+    z-index: 1000;
+    margin-left: $message-indent;
+    left: 100%;
+    top: -2px;
+    &:before{
+        border-style: solid;
+        content: '';
+        position: absolute;
+    }
+    &:before{
+        margin-top: -$arrow-width;
+        top: 50%;
+        border: {
+            width: $arrow-width $arrow-height $arrow-width 0;
+            color: transparent $message-bg transparent transparent;
+        }
+        right: 100%;
+    }
+}

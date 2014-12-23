@@ -13,10 +13,17 @@
         //показываем кнопки пролистывания
         $('.b-slider__arrows').show()
             //находим кнопки пролистывания и вещаем на их клик функцию
-            .find('a').on('click', function (){
+            .find('span').on('click', function (){
                 //смотрим какая кнопка нажата
                 var direction = $(this).attr('id'),
-                    position = imgW; 
+                    position = imgW;
+
+                if ($('#b-slider__arrows-status').val() == 0 ) {
+                    return false;
+                }
+
+                $('#b-slider__arrows-status').val(0);
+
                 (direction === "next") ? ++current : --current;
                 if (current === 0) {
                     current = imgLen;
@@ -27,7 +34,9 @@
                     position = 0;
 
                 }
+
                 slide(viewUL, position, direction);
+
                //console.log(current);
         });
 
@@ -39,6 +48,7 @@
             container.animate({
                     'margin-left' : sing ? (sing+position) : position
             }, 500, 'swing');
+            $('#b-slider__arrows-status').val(1);
         }      
     }
 })(jQuery);

@@ -46,6 +46,7 @@ html, body {
     padding: 11px 0 9px 0;
     text-align: center;
     margin-bottom: 15px;
+    position: relative;
     
     &__callback-form {
         padding: 0 10px 0 12px;
@@ -60,6 +61,7 @@ html, body {
     &__step {
         height: 26px;
         padding-bottom: 15px;
+        position: relative;
     }    
     &__step-h67 {
         height: 69px;
@@ -77,8 +79,9 @@ html, body {
         border: 1px solid #dae1eb;
         display: block;
         float: right;
-        height: 26px;              
-        padding: 3px 0 0 7px;
+        height: 26px;
+        line-height: 25px;
+        padding-left: 5px;
         width: 133px;
         font-size: 13px;
         outline: none;       
@@ -285,6 +288,7 @@ html, body {
         position: absolute;
         box-sizing: border-box;
         display: block;
+        user-select: none;
         top: 103px; 
         width: 69px;
         height: 34px;
@@ -296,6 +300,7 @@ html, body {
     }
     &__arrows-left:hover, &__arrows-right:hover { 
         color: #ffffff;
+        cursor: pointer;
     }
     &__arrows-left:hover{
         @include sprite($s-slide-left-hover);
@@ -602,12 +607,3 @@ html, body {
 .b-topsite:hover {
     opacity: 1;  
 }
-
-
-
-
-.error { 
-	border: 1px solid #ef5b5b;
-	box-shadow: 0 0 5px rgba(239,91,91,0.5);
-}
-
